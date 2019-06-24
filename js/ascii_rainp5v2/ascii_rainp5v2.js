@@ -5,6 +5,8 @@ let data = ['a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i','j','k','l',
 let objects = []; // array of Jitter objects
 var minSpeed = 2, maxSpeed = 4;
 
+var canvas; // add the canvas 
+
 var numberOfObjects = 200;
 
 //font setup
@@ -16,7 +18,8 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(1200, 400);
+  canvas = createCanvas(1200, 400);
+  canvas.position(0,0);
   
   
   textFont(font); 
