@@ -18,8 +18,9 @@ function preload(){
 }
 
 function setup() {
-  canvas = createCanvas(1200, 400);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
+  canvas.style('z-index', '-1');
   
   
   textFont(font); 
