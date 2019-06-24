@@ -4,7 +4,7 @@ let data = ['a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i','j','k','l',
 '!','@', '£', '$', '%','^','&', '*', '(', ')', '_', '+',
 '{','}', '[', ']', ':', ';', '|', '\','<', '>',',', '.',]; 
 let objects = []; // array of Jitter objects
-var minSpeed = 2, maxSpeed = 10;
+var minSpeed = 2, maxSpeed = 6;
 
 var canvas; // add the canvas 
 
