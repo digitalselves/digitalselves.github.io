@@ -17,7 +17,7 @@ var font, fontSize = 28;
 var rand;
 
 function preload(){
-  font = loadFont('assets/SourceSansPro-Bold.otf');
+  font = loadFont('assets/SourceSansPro-SemiBold.otf');
 }
 
 
