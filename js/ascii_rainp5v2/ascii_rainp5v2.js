@@ -1,10 +1,7 @@
-let data = [
-           'a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i','j','k','l', 
+let data = ['a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i','j','k','l', 
 'm','n', 'o', 'p', 'q','r','s','t','u','v', 'w','x','y','z',
 '1', '2', '3', '4','5', '6', '7', '8', '9','0','-', '=',
-'!','@', '£', '$', '%','^','&', '*', '(', ')', '_', '+',
-'{','}', '[', ']', ':', ';',
-"o:-)", ";-", ":>S", "8-)", "=:-)", "X-(", "{:-}",]; 
+'!','@', '£', '$', '%','^','&', '*', '(', ')', '_', '+',]; 
 
 
 let objects = []; // array of Jitter objects
@@ -19,7 +16,7 @@ var font, fontSize = 28;
 var rand;
 
 function preload(){
-  font = loadFont('assets/SourceSansPro-SemiBold.otf');
+  font = loadFont('assets/SourceSansPro-Light.otf');
 }
 
 
