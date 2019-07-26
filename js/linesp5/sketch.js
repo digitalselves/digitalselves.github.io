@@ -1,4 +1,4 @@
-var cnv;
+var canvas; //create canvas 
 
 var wid = 500;
 var hei = 300;
@@ -6,6 +6,7 @@ var hei = 300;
 var NB_FRAMES = 100;
 
 var frame_count = 0;
+
 
 function activation(t) {
     return ((1-cos(2*PI*t))/2)**1;
@@ -57,6 +58,11 @@ function object(id) {
     }
 }
 
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+
 var Objects = [];
 var NB = 100;
 
@@ -65,8 +71,9 @@ function setup() {
     noiseSeed(curSeed);
     randomSeed(1);
     
-    cnv = createCanvas(wid,hei);
-    //cnv.parent("canvas");
+    canvas = createCanvas(windowWidth, windowHeight);
+    canvas.position(0,0);
+    canvas.style('z-index', '-1');
     
     background(0);
     
