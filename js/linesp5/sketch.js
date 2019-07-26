@@ -75,7 +75,7 @@ function setup() {
     canvas.position(0,0);
     canvas.style('z-index', '-1');
     
-    background(0);
+    background(#212121);
     
     for(var i = 0;i<NB;i++) {
         Objects[i] = new object(i);
