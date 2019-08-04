@@ -89,7 +89,7 @@ function mousePressed(){
 }
 
 function draw() {
-    background(0);
+    background(33, 33,33);
     
     var t = ((frame_count)%NB_FRAMES)/NB_FRAMES;
     
