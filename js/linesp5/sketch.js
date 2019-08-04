@@ -1,7 +1,7 @@
 var canvas; //create canvas 
 
-var wid = 500;
-var hei = 300;
+var wid = windowWidth;
+var hei = windowHeight;
 
 var NB_FRAMES = 100;
 
