@@ -1,7 +1,6 @@
 var canvas; //create canvas 
+ 
 
-var wid = windowWidth;
-var hei = windowHeight;
 
 var NB_FRAMES = 100;
 
@@ -19,7 +18,7 @@ function object(id) {
     this.draw = function() {
         var t = ((frame_count)%NB_FRAMES)/NB_FRAMES;
         
-        var x0 = lerp(0,wid,this.id/NB);
+        var x0 = lerp(0,windowWidth,this.id/NB);
         
         theta = PI/2;
         
@@ -28,7 +27,7 @@ function object(id) {
         
         var Nt = 75;
         
-        var step = hei/Nt;
+        var step = windowHeight/Nt;
         
         var turn = lerp(0,0.4,activation((this.id/NB+0*t)%1));
         
@@ -47,7 +46,7 @@ function object(id) {
             yy += step*sin(theta);
             
             var xx2 = lerp(xx,x0,(i/Nt)*(i/Nt)*(i/Nt));
-            var yy2 = lerp(yy,lerp(0,hei-0,i/Nt),max((i/Nt),1-sqrt(i/Nt)));
+            var yy2 = lerp(yy,lerp(0,windowHeight-0,i/Nt),max((i/Nt),1-sqrt(i/Nt)));
             
             vertex(xx2,yy2);
             
