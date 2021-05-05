@@ -1,4 +1,6 @@
 # lwlsn.github.io
 
 
-personal webpage
+[Check out my personal webpage](https://lwlsn.github.io/digitalselves-web/)
+
+
