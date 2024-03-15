@@ -1,74 +1,87 @@
-let data = ['a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i','j','k','l', 
-'m','n', 'o', 'p', 'q','r','s','t','u','v', 'w','x','y','z',
-'1', '2', '3', '4','5', '6', '7', '8', '9','0','-', '=',
-'!','@', '£', '$', '%','^','&', '*', '(', ')', '_', '+',
-"o:-)", ";-", ":>S", "8-)", "=:-)", "X-(", "{:-}",
-]; 
+
+let charset = ':(,:),:S, :O, :/, >:(';
+let splitString = charset.split(',');
 
 
-let objects = []; // array of Jitter objects
-var minSpeed = 2, maxSpeed = 6;
+//Raindrop-like objects
+function Drop() {
+  this.spawn = function (y, y2) {
+    this.x = random(width);
+    
+    //Spread out the drops
+    this.y = random(y, y2);
+    
+    // Z value used to adjust size and fall speed  for a 3D effect
+    this.z = random(0, 20);
+    this.size = map(this.z, 0, 20, 9, 20);
+    this.yspeed = map(this.z, 0, 20, 10, 30);
+  }
+  
+  //Spread the drops out far at first
+  this.spawn(-900, -10);
 
-var canvas; // add the canvas 
+  this.fall = function () {
+    this.y = this.y + this.yspeed;
 
-var numberOfObjects = 200;
+    if (this.y > height) {
+      /* Reset the drop
+      spreading is not
+      as important */
+      this.spawn(-200, -100);
+    }
+  };
 
-//font setup
-var font, fontSize = 28;
-var rand;
-
-function preload(){
-  font = loadFont('assets/SourceSansPro-Light.otf');
+  this.show = function () {
+    textSize(this.size); //smaller is "farther away"
+    fill("#F00"); //green text
+    text(random(splitString), this.x, this.y); //change character for each update
+  }
 }
 
-
-function windowResized(){
-  resizeCanvas(windowWidth, windowHeight);
-}
+var drops = [];
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
-  canvas.position(0,0);
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.style('position', 'fixed');
+  canvas.style('top', '0');
+  canvas.style('left', '0');
   canvas.style('z-index', '-1');
+  canvas.id('myCanvas');
   
+  frameRate(15); //15-20 for nice fallspeed
   
-  textFont(font); 
-  textSize(fontSize);
- 
-  
-  // Create objects
-  for (let i = 0; i < numberOfObjects; i++) {
-    objects.push(new Ascii());
+  for (var i = 0; i < 150; i++) {
+    drops[i] = new Drop();
   }
+
+
 }
 
 function draw() {
-  background('#212121');
-  for (let i = 0; i < numberOfObjects; i++) {
-    objects[i].move();
-    objects[i].display(data[i]);
-  }
+  /* Lower opacity background
+  for longer trail 
+  (causes old characters to fade
+  as new backgrounds are layered on)*/
+  background('rgba(0, 0, 0, 0.2)');
   
-
+  for (var i = 0; i < drops.length; i++) {
+    drops[i].fall();
+    
+    /* optionally draw larger (closer)
+    drops on top */
+    // drops.sort(function (a, b) {
+    //   return a.z - b.z;
+    // });
+    
+    drops[i].show();
+  }
 }
 
-// Jitter class
-class Ascii {
-  constructor() {
-    this.x = random(width);
-    this.y = random(height);
-    this.speed = minSpeed + random(maxSpeed-minSpeed);
-  }
-
-  move() {
-    this.y += this.speed;
-    if (this.y > height) 
-      this.y=0;
-  }
-
-  display(character) {
-    noStroke();
-    fill(240, 92,92);
-    text(character, this.x, this.y);
-  }
+function windowResized() {
+  // Calculate the desired width and height
+  var desiredWidth = windowWidth;
+  var desiredHeight = Math.max(document.body.scrollHeight, windowHeight);
+  
+  // Resize the canvas
+  resizeCanvas(desiredWidth, desiredHeight);
 }

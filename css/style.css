@@ -1,10 +1,11 @@
 html, body {
    margin: 60px auto;
-   width: 70%;
+   width: 85%;
    padding: 0;
    height: 100%;
    background:  #212121;
    font-family: 'VT323',Monospace,sans-serif;   
+
 }
 
 
@@ -61,3 +62,42 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+
+.white-arrow {
+    width: 20vw; /* Adjust the percentage as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project {
+    margin: 20px; /* Add some margin around each project */
+    padding: 20px; /* Add padding to create space between elements inside the project */
+    border: 1px solid #151515; /* Add a border for visual separation */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #151515; /* Add a light background color */
+}
+
+.project h2 {
+    font-size: 24px; /* Set the font size for project titles */
+    margin-top: 0; /* Remove default top margin */
+    color: #333; /* Set the color of project titles */
+}
+
+.project p {
+    font-size: 16px; /* Set the font size for project descriptions */
+    color: #666; /* Set the color of project descriptions */
+}
+
+.project-image {
+    width: 100%; /* Make the project image fill the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Add some space between the project description and the image */
+}
+
+
+#myCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
