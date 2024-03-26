@@ -137,7 +137,7 @@ pre {
 
 .error {
   text-align: center;
-  font-family: 'Gilda Display', serif;
+  /* font-family: 'Gilda Display', serif; */
   
   text-align: center;
   width: 100%;
@@ -224,10 +224,10 @@ span.green {
   color: #33cc33;
 }
 
-.viewFull {
+/* .viewFull {
   font-family:OCR-A;
   color:orange;
-}
+} */
 
 
  @media only screen and (min-height: 500px) {
@@ -241,7 +241,7 @@ span.green {
 
 /*Glitch*/
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+/* @import url(https://fonts.googleapis.com/css?family=Raleway:400,800); */
 img2 {
 	width: 100%;
 	/*width: 30%;
