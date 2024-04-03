@@ -131,9 +131,9 @@ pre {
   height: 120px;
   margin: auto;
   position: absolute;
-  top:450px;
+  top:500px;
   bottom: 50px;
-  left: 440px;
+  left: 200px;
   right: 0;
   -webkit-animation: noise-3 10s linear infinite;
           animation: noise-3 2s linear infinite;
@@ -228,7 +228,7 @@ span.green {
 
 /*Glitch*/
 
-/* @import url(https://fonts.googleapis.com/css?family=Raleway:400,800); */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
 img2 {
 	width: 100%;
 	/*width: 30%;
@@ -297,6 +297,8 @@ img2 {
 footer {
   border-top: 1px solid #d5d5d5;
   font-size: .8em;
+  font-family: 'Orbitron', sans-serif;
+  
 }
 
 ul.posts {

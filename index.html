@@ -1,97 +1,71 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title> digital selves</title>
-    
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="css/style.css">
-      <meta charset="utf-8">
+<html>
+
+<head>
+	<title> digital selves</title>
+
+	<!-- link to main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
 	<script src="js/p5.min.js"></script>
-   	 <script src="js/p5.dom.min.js"></script>
-    <script src="js/p5.sound.min.js"></script>
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-			
-				<li><a href="https://lwlsn.github.io/digitalselves-web/index.html">Home</a></li>
-				<li><a href="https://lwlsn.github.io/digitalselves-web/livesets.html">Live</a></li>
-				<li><a href="https://lwlsn.github.io/digitalselves-web/projects.html">Sounds</a></li>
-	        		<!-- <li><a href="https://lwlsn.github.io/digitalselves-web/about.html">.Self</a></li>  -->
-              <!-- <li><a href="https://lwlsn.github.io/digitalselves-web/blog">.Self</a></li>  -->
-<!--                <li> <a href= https://lwlsn.github.io/digitalselves-web/heavy-rotation.html> Now Playing </a></li> -->
-<!-- 				<li><a href="https://lwlsn.github.io/digitalselves-web/projects.html">Projects</a></li>  -->
-				
-	    		</ul>
-			</nav>
-	
+	<script src="js/p5.dom.min.js"></script>
+	<script src="js/p5.sound.min.js"></script>
 
-        <script src="js/linesp5/sketch.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
 
-		<div id="scroll-container">
-			<div id="scroll-text"> digital selves is a live coder and experimental musician. Their work melds ominous rave synths, wild arpeggios, and spiralling granular electronics, revealing playful and imaginative sounds that twinkle out of earshot.  </div>
+<body>
+	<nav>
+		<ul>
+
+			<li><a href="https://lwlsn.github.io/digitalselves-web/index.html">Home</a></li>
+			<li><a href="https://lwlsn.github.io/digitalselves-web/livesets.html">Live</a></li>
+			<li><a href="https://lwlsn.github.io/digitalselves-web/projects.html">Sounds</a></li>
+			<!-- <li><a href="https://lwlsn.github.io/digitalselves-web/about.html">.Self</a></li>  -->
+			<!-- <li><a href="https://lwlsn.github.io/digitalselves-web/blog">.Self</a></li>  -->
+			<!--                <li> <a href= https://lwlsn.github.io/digitalselves-web/heavy-rotation.html> Now Playing </a></li> -->
+			<!-- 				<li><a href="https://lwlsn.github.io/digitalselves-web/projects.html">Projects</a></li>  -->
+
+		</ul>
+	</nav>
+
+
+	<script src="js/linesp5/sketch.js"></script>
+
+	<div id="scroll-container">
+		<div id="scroll-text"> digital selves is a live coder and experimental musician. Their work melds ominous rave
+			synths, wild arpeggios, and spiralling granular electronics, revealing playful and imaginative sounds that
+			twinkle out of earshot. </div>
+	</div>
+
+
+
+
+
+	<div class="textbody">
+
+		<div class="img">
+			<img src="assets/digital-selves-logo2.png">
 		</div>
 
-		<div class="img"> 
-			<img  src="assets/digital-selves-logo2.png">
-		</div>
 
-
-	
-
-
-
-        <div class="textbody">
-
-				
-		<!-- Glitch -->
+		<!-- Glitch: from this code: https://github.com/lwlsn/tidal_codes/blob/master/covers/scott-brown.tidal -->
 		<div class="error">
 
 			<pre><code>
 			 <span class="blue">do</span>
-		<span class="orange">   	  let</span><span>   synthPat =</span>  <span class="green">"{~ d4 b4 [c5 b4] [~ b4] <g4 e4> [<g4 e4> <a4 g4>] [~ <a4 g4>]}%4"</span>
-			<span> 	bassSound = </span><span class="green"> "[ser2:1, umbass:3]"</span>
-			<span> 	melodyPat = </span><span class="green"> "{[<c6 e6> <b5 ~>] [<c6 e6> <b5 d6>] [~ <b5 d6>] [~ d5] ~ e5 e5 <e5 [e5 d6]>}%4"</span>
-			<!-- <span class="orange">&lt;style&gt;</span>
-		   * {
-						<span class="green">digital</span>:<span class="blue">selves</span>;
-		}
-			 <span class="orange">&lt;/style&gt;</span>
-		 <span class="orange">&lt;body&gt;</span> 
-					  ERROR!
-						FILE NOT FOUND!
-						<span class="comment">&lt;!--The file you are looking for, 
-							is not where you think it is.--&gt;
-				</span>
-		 <span class="orange"></span> 
-					  
-		<br />
-
-		<span class="orange">&nbsp;&lt;/body&gt;</span>
-		<br/>
-			  <span class="orange">&lt;/html&gt;</span>
-			</code></pre> -->
+			<span class="orange">    let</span><span>   synthPat =</span>  <span class="green">"{~ d4 b4 [c5 b4] [~ b4] < g4 e4 > [< g4 e4 > < a4 g4 >] [~ < a4 g4 >]}%4"</span>
+			<span> 	  bassSound = </span><span class="green"> "[ser2:1, umbass:3]"</span>
+			<span> 	  melodyPat = </span><span class="green"> "{[< c6 e6> < b5 ~>] [< c6 e6> < b5 d6>] [~ < b5 d6>] [~ d5] ~ e5 e5 < e5 [e5 d6]>}%4"</span>
+			<span>	  mixer = [1, 1, 1, 1] </span>	
+			<span class="blue">     d1  $</span> <span>sometimes (spaceVerb)</span>
+			<span class="blue">	 $ </span><span>note (synthPat + </span><span class="green">"<12 -12>"</span><span>)</span><span><span class="blue"> #</span><span> sound </span><span class="green">"ser:2"</span>
+			<span class="blue">	 |*|</span><span> gain (mixer!!0)</span>
 
 		</div>
-
-
-
-<!-- 
-           <h2> PRESS </h2>
-		
-		
-		 
-	 	<li> <a href="https://www.youtube.com/watch?v=t2KeNblKSFM"> FACT mag -- Artist DIY </a> </li>
-		
-		<li> <a href="https://thevinylfactory.com/news/lia-mice-the-sampler-as-a-time-machine-remix-vinyl/"> [[Remix]] Sampler as a Time Machine </a> </li>
-			
-		<li> <a href="https://www.youtube.com/watch?v=9iPRPIe_PbQ"> FACT mag -- Sonic Futures </a> </li> 
-        
-		<li><a href="https://cycling74.com/articles/on-the-road-the-algorithmic-art-assembly"> CYCLING 74 -- On The Road: The Algorithmic Art Assembly</a></li>
-
-             
-	
-     		</div> -->
+	</div>
 
 
 
