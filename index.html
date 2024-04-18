@@ -61,9 +61,9 @@
 			<span> 	  melodyPat = </span><span class="green"> "{[< c6 e6> < b5 ~>] [< c6 e6> < b5 d6>] [~ < b5 d6>] [~ d5] ~ e5 e5 < e5 [e5 d6]>}%4"</span>
 			<span>	  mixer = [1, 1, 1, 1] </span>	
 			<span class="blue">     d1  $</span> <span>sometimes (spaceVerb)</span>
-			<span class="blue">	 $ </span><span>note (synthPat + </span><span class="green">"<12 -12>"</span><span>)</span><span><span class="blue"> #</span><span> sound </span><span class="green">"ser:2"</span>
+			<span class="blue">	 $ </span><span>note (synthPat + </span><span class="green">"<12 -12>"</span><span>)</span><span><span class="blue"> #</span><span> s </span><span class="green">"ser:2"</span>
 			<span class="blue">	 |*|</span><span> gain (mixer!!0)</span>
-
+			<span class="blue">     d2  $</span><span> whenmod 4 3 (const</span><span class="blue"> $</span><span> struct</span><span class="green"> "{1 [~ 1] ~ 1}"</span><span class="blue"> $</span><span>s (bassSound)</span><span class="blue"> #</span><span> note</span><span class="green">"< e4 a4 g4 >"</span>
 		</div>
 	</div>
 
